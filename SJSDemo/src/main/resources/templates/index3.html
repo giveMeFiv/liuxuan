@@ -1,0 +1,30 @@
+
+<html >
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>后台登陆页面</title>
+
+</head>
+
+<body >
+
+<li th:each="authority:${authorities}"  class="tpl-left-nav-item">
+
+<a th:href="${authority.url}"  th:text="${authority.description}"></a>
+
+</li>
+
+          <h3>合不合适不重要  有钱最重要  三观极歪 哈哈</h3>
+
+          <form th:action="@{/custom-logout}" method="post">
+
+        <input type="submit" value="退出">
+
+        </form>
+
+</body>
+
+</html>
